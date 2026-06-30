@@ -91,7 +91,7 @@
 .form-row {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
 }
 
 .form-row label {
@@ -106,9 +106,12 @@
 
 /* Body- background color and font*/
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    color: #333333;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    background-color: #30050E;
+    color: whitesmoke;
 }
 
 /* Header*/
@@ -117,14 +120,21 @@ header p    →  only the paragraph underneath
 header a    →  only links inside header (if any) */
 
 header {
-    background-color: #3f0c0c;
-    color: white;
+    background-color: #30050E;
+    color: #F2F4F3;
+    font-family: "Pliant", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+header p {
     font-family: "Dancing Script", cursive;
     font-optical-sizing: auto;
     font-weight: <weight>;
     font-style: normal;
-    padding: 20px;
-    text-align: center;
 }
 
 
@@ -141,23 +151,32 @@ nav ul {
     flex-wrap: wrap;
     /* This will control what happens to the row if the write up doesn't fit into the device size. */
     gap: 20px;
-    padding: 10px 20px;
+    font-family: "Pliant", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
 }
 
 /* Navigation bar*/
 nav {
-    background-color: #0B2B26;
+    background-color: #FFFCF6;
     padding: 10px;
-    border-radius: 6px;
     margin-top: 2px;
 }
 
 nav a {
-    color: white;
+    color: #0A0908;
     text-decoration: none;
     margin-right: 20px;
-
 }
+
+nav a:hover {
+    color: #970724;
+    size: 2em;
+}
+
 
 /* Main content area*/
 main {
@@ -166,21 +185,14 @@ main {
     padding: 0 20px;
 }
 
-/* Sections*/
+/* Sections (which is the tables)*/
 section {
-    background-color: white;
+    background-color: #000000;
     padding: 30px;
-    margin: 24px;
+    margin: 8px;
     border-radius: 8px;
 }
 
-/* Footer section*/
-footer {
-    background-color: #16213e;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
 
 /* Style the h1 in the header*/
 header h1 {
@@ -192,8 +204,8 @@ header h1 {
 section h2 {
     font-size: 24px;
     margin-bottom: 16px;
-    color: #1a1a2e;
-    border-bottom: 2px solid #4CAF50;
+    color: #4D0C12;
+    border-bottom: 2px solid #000000;
     padding-bottom: 8px;
 }
 
@@ -213,11 +225,9 @@ td {
 
 th {
     /* this styles the content(cells) in the table header */
-    background-color: #1a1a2e;
-    color: white;
+    background-color: whitesmoke;
+    color: #1E100F;
 }
-
-
 
 
 /* Style the forms inputs and buttons */
@@ -231,7 +241,7 @@ button {
 }
 
 button {
-    background-color: #4CAF50;
+    background-color: #30050E;
     color: white;
     border: none;
     cursor: pointer;
@@ -267,3 +277,10 @@ NOTE:
 Flex containers can be nested. Each one only controls its own direct children — 
 never grandchildren. This is one of the most common patterns in real layouts: flex inside flex, 
 each solving a small local problem.*/
+/* Footer section*/
+footer {
+    background-color: #16213e;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}

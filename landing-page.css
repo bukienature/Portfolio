@@ -1,0 +1,304 @@
+/* let's target all the elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-family: "Pliant", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    /* sets root font size to 10px (62.5% of default 16px) */
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: whitesmoke;
+}
+
+.main {}
+
+header {
+    position: fixed;
+    top: 2%;
+    left: -8%;
+    width: 100%;
+    padding: 1rem 9%;
+    /* pushes content 20px away from the edges, on all sides */
+    background-color: transparent;
+    filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.3));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    /* always stays on top of everything */
+}
+
+.logo {
+    /*styling for the logo or header fonts and size */
+    font-size: 3rem;
+    color: #FFFFFF;
+    font-family: "Roboto-condensed", Verdana, sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -2px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.crown {
+    font-size: 15px;
+    vertical-align: super;
+    color: #FF1A1A;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.nav-link {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 5px;
+    list-style: none;
+    gap: 0.5rem;
+    margin-top: 2rem;
+    margin-right: -3rem;
+}
+
+.contact-button {
+    color: #000000;
+}
+
+nav a {
+    font-size: 1.5rem;
+    color: whitesmoke;
+    margin-left: 4rem;
+    font-weight: 400;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a.active {
+    color: #4e0a0a;
+    border-bottom: 3px solid #4e0a0a;
+}
+
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url("./images/img-red.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero img {
+    width: 65rem;
+    height: auto;
+    object-fit: contain;
+
+}
+
+.hero-content {
+    max-width: 30rem;
+    margin: 0.5rem;
+
+}
+
+
+.social-icons {
+    color: whitesmoke;
+    font-size: 3rem;
+    display: flex;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.social-icons a {
+    color: whitesmoke;
+    transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+    color: #F6F3E4;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================================
+   POSITIONING & LAYOUT — REFERENCE NOTE
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   POSITION VALUES
+   ------------------------------------------------------------
+   position: fixed     → locked to the SCREEN. doesn't move when
+                          you scroll. always relative to the viewport.
+                          requires z-index to control layering.
+                          example: sticky headers, floating buttons.
+
+   position: relative  → stays in normal flow but unlocks nudging
+                          with top/left/right/bottom.
+                          also activates z-index on that element.
+                          example: a parent container for absolute children.
+
+   position: absolute  → removed from normal flow completely.
+                          positions itself relative to the nearest
+                          PARENT that has any position set.
+                          if no parent has position, it goes to <body>.
+                          example: a badge/label on top of a card.
+
+   position: sticky    → scrolls normally UNTIL it hits a threshold
+                          (e.g. top: 0), then sticks there like fixed.
+                          hybrid of relative and fixed.
+                          example: table headers that stick while scrolling.
+
+   IMPORTANT RULE: z-index ONLY works on elements that have a
+   position value set. on elements with no position, z-index
+   does absolutely nothing.
+   ------------------------------------------------------------ */
+
+/* ------------------------------------------------------------
+   Z-INDEX — LAYERING
+   ------------------------------------------------------------
+   think of your page as stacked sheets of paper on a desk.
+   higher z-index = closer to your eyes = on top of everything lower.
+
+   z-index: 1     → bottom layer
+   z-index: 100   → sits above everything below 100
+   z-index: 200   → sits above z-index: 100
+
+   example: header fixed at z-index: 100 means page content
+   scrolling up behind it will always stay under the header.
+
+   if hero image had z-index: 200 and header had z-index: 100,
+   the hero image would cover the header when overlapping.
+   ------------------------------------------------------------ */
+
+/* ------------------------------------------------------------
+   DISPLAY: FLEX — QUICK RULES
+   ------------------------------------------------------------
+   always goes on the CONTAINER (parent), not the items (children).
+
+   display: flex              → turns children into a row
+   flex-direction: column     → turns children into a column
+   justify-content            → controls spacing ALONG the main axis
+     flex-start               → items hug the start (left in row mode)
+     center                   → items centered together
+     flex-end                 → items hug the end (right in row mode)
+     space-between            → first item left, last item right,
+                                 equal gaps between the rest
+     space-around             → equal space around every item
+   align-items                → controls alignment on the CROSS axis
+     center                   → vertically centered (in row mode)
+     flex-start               → items align to the top
+     flex-end                 → items align to the bottom
+   gap                        → space between flex children
+   flex-wrap: wrap            → items drop to next line if no space
+   list-style: none           → removes bullet points from <ul>/<ol>
+   ------------------------------------------------------------ */
+
+/* ------------------------------------------------------------
+   BACKGROUND PROPERTIES
+   ------------------------------------------------------------
+   background-color           → solid color fill
+   background-image           → url("./images/file.jpg")
+   background-size: cover     → stretches image to fill entire element,
+                                 no empty gaps, may crop edges
+   background-repeat: no-repeat → shows image once, no tiling
+   background-position: center  → centers the image in the element
+
+   LAYERING gradient over image:
+   background: linear-gradient(
+       rgba(0,0,0,0.5),       → semi-transparent dark layer on top
+       rgba(0,0,0,0.5)        → same at the bottom
+   ), url("./images/img.jpg");
+
+   WHY: dark overlay makes white text readable over a bright image.
+   TWO DIFFERENT COLORS: creates a visual transition from one to another
+   e.g. dark at top, lighter at bottom.
+   ------------------------------------------------------------ */
+
+/* ------------------------------------------------------------
+   FILTER PROPERTY
+   ------------------------------------------------------------
+   filter applies a visual effect to the entire element.
+
+   filter: drop-shadow(x y blur color)
+     x     → horizontal offset (positive = right, negative = left)
+     y     → vertical offset  (positive = down,  negative = up)
+     blur  → softness of the shadow edge
+     color → shadow color, usually rgba() for transparency
+
+   drop-shadow vs box-shadow:
+     drop-shadow  → traces the ACTUAL SHAPE of the element
+                     (follows transparent PNG cutouts perfectly)
+     box-shadow   → follows the rectangular BOX around the element
+                     (ignores transparency inside the element)
+   ------------------------------------------------------------ */
+
+/* ------------------------------------------------------------
+   PADDING vs MARGIN
+   ------------------------------------------------------------
+   think of an element as a person sitting in a room:
+
+   content  → the person
+   padding  → space between the person and the walls (INSIDE)
+   border   → the walls themselves
+   margin   → space between this room and the next room (OUTSIDE)
+
+   padding: 20px              → 20px on all 4 sides (inside)
+   margin: 20px               → 20px on all 4 sides (outside)
+   padding: 10px 20px         → 10px top/bottom, 20px left/right
+   padding-top / bottom /
+           left / right       → target one side only
+   ------------------------------------------------------------ */
+
+/* ------------------------------------------------------------
+   FONT-SIZE: 62.5% ON HTML ELEMENT
+   ------------------------------------------------------------
+   default browser font size = 16px
+   62.5% of 16px             = 10px
+
+   this makes rem math simple:
+   1rem   = 10px
+   1.6rem = 16px
+   2.4rem = 24px
+   5.6rem = 56px
+
+   only affects elements using rem units.
+   elements using px directly are NOT affected.
+   ------------------------------------------------------------ */
