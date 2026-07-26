@@ -1,5 +1,5 @@
 /* let's target all the elements */
-/* GENERAL ELEMENT SELECTORS*/ 
+/* GENERAL ELEMENT SELECTORS*/
 
 * {
     margin: 0;
@@ -9,6 +9,7 @@
     outline: none;
     font-family: "inter", sans-serif;
 }
+
 html {
     font-size: 62.5%;
     /* sets every 1rem to 10px (62.5% of default 16px) */
@@ -21,7 +22,8 @@ body {
 /*======================================================================================*/
 
 
-.main { /* This will target the sizing of the hero section*/
+.main {
+    /* This will target the sizing of the hero section*/
     width: 100%;
     min-height: 100vh;
     background-color: black;
@@ -29,7 +31,11 @@ body {
 }
 
 
-header { /*this is for the header "BUKIE" and the navigation bar to control the position */
+header {
+    /*this is for the header "BUKIE" and the navigation bar to control the position */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: fixed;
     top: 2%;
     left: -6%;
@@ -38,9 +44,6 @@ header { /*this is for the header "BUKIE" and the navigation bar to control the 
     /* pushes content 20px away from the edges, on all sides */
     background-color: transparent;
     filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.3));
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     z-index: 100;
     /* always stays on top of everything */
 }
@@ -56,16 +59,21 @@ header { /*this is for the header "BUKIE" and the navigation bar to control the 
     cursor: pointer;
     transition: 0.5s ease;
 }
-.crown { /* the little crown next to the name */
+
+.crown {
+    /* the little crown next to the name */
     font-size: 1.5rem;
     vertical-align: super;
     color: #b61e1e;
 }
-.logo:hover { /*pseudo element for the hover scale when the cusor is on the logo/header */
+
+.logo:hover {
+    /*pseudo element for the hover scale when the cusor is on the logo/header */
     transform: scale(1.1);
 }
 
-.nav-link { /* this targets the position of all the navigation links */ 
+.nav-link {
+    /* this targets the position of all the navigation links */
     position: fixed;
     top: 0;
     left: 43%;
@@ -77,7 +85,9 @@ header { /*this is for the header "BUKIE" and the navigation bar to control the 
     margin-top: 1.5rem;
     margin-right: -3rem;
 }
-.btn { /* the hire me button styling */
+
+.btn {
+    /* the hire me button styling */
     background-color: #e42625;
     margin-left: 2rem;
     margin-bottom: 2rem;
@@ -87,7 +97,9 @@ header { /*this is for the header "BUKIE" and the navigation bar to control the 
     padding-bottom: 1rem;
     border-radius: 7px;
 }
-nav a { /* Targeting the font of the entire navigation links */
+
+nav a {
+    /* Targeting the font of the entire navigation links */
     font-size: 1.5rem;
     color: whitesmoke;
     margin-left: 4rem;
@@ -96,18 +108,23 @@ nav a { /* Targeting the font of the entire navigation links */
     border-bottom: 3px solid transparent;
     text-decoration: none;
 }
+
 nav a:hover,
-nav a.active { /* pseudo element to control when we cover over the navigation list or click on them */
+nav a.active {
+    /* pseudo element to control when we cover over the navigation list or click on them */
     color: #4e0a0a;
     border-bottom: 3px solid #4e0a0a;
 }
 
+/* the navigation bar and the logo ^  */
 /*---------------------------------------------------------------*/
 
-.hero-section { /* This styling controls the background image and position/spacing of the hero section */ 
+
+.hero-section {
+    /* This styling controls the background image and position/spacing of the hero section */
     display: flex;
     position: relative;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: flex-end;
     width: 100%;
     min-height: 100vh;
@@ -118,49 +135,38 @@ nav a.active { /* pseudo element to control when we cover over the navigation li
     background-repeat: no-repeat;
 }
 
-.hero {   /* The amount of space the content section of the hero section can take */
+.hero {
+    /* The amount of space the content section of the hero section can take */
     flex: 1;
     align-self: stretch;
 
 }
 
 
-.hero img { /* The hero image */
+.hero img {
+    /* The hero image */
     width: 100%;
     height: 110vh;
     position: relative;
     object-fit: cover;
-    object-position: left;
     object-position: top left;
     mask-image: linear-gradient(to right, transparent 0%, black 25%);
 }
 
 
-.hero-content { /* the hero content */
-    max-width: 30rem;
+.hero-content {
+    /* the hero content */
+    max-width: 40rem;
     margin: 0.5rem;
+    margin-left: 4rem;
+    margin-bottom: 7rem;
 }
 
-
-.social-icons {  /* the hero section social media icons */ 
-    color: whitesmoke;
-    font-size: 3rem;
-    display: flex;
-    gap: 1.5rem;
-    margin: 2rem 0;
-}
-.social-icons a { /* the social media icon*/ 
-    color: whitesmoke;
-    transition: 0.3s ease;
-}
-.social-icons a:hover { /* hero section secial media icon pseudo styling */
-    transform: scale(1.2);
-    color: #F6F3E4;
-}
 
 /*---------------------------------------------------------------*/
 
-.Hero-intro { /* the hero section intro text */ 
+.Hero-intro {
+    /* the hero section intro text */
     color: #bd1316;
     margin-bottom: 2rem;
     font-family: "Poppins", sans-serif;
@@ -168,19 +174,22 @@ nav a.active { /* pseudo element to control when we cover over the navigation li
     font-size: 2rem;
 }
 
-.hero-content h1 { /* the hero section intro text */
-    font-family: "Poppins", sans-serif; 
+.hero-content h1 {
+    /* the hero section intro text */
+    font-family: "Poppins", sans-serif;
     font-weight: 700;
     font-size: 5rem;
     line-height: 1;
 }
-    
-.Hero-role { /* the hero section role text */ 
+
+.Hero-role {
+    /* the hero section role text */
     color: #bd1316;
     font-size: 4rem;
 }
 
-.hero-content > p:nth-child(3) { /* the little white hero section paragraph text */ 
+.hero-content>p:nth-child(3) {
+    /* the little white hero section paragraph text */
     font-size: 1.2rem;
     color: whitesmoke;
     line-height: 1.6;
@@ -190,19 +199,23 @@ nav a.active { /* pseudo element to control when we cover over the navigation li
 }
 
 /* the content buttons of the hero section */
-.content-buttons{
+.content-buttons {
     display: flex;
     justify-content: flex-start;
     list-style: none;
 }
-.work-btn { /* the hero section work button */ 
+
+.work-btn {
+    /* the hero section work button */
     background-color: #e42625;
     margin-left: 0.1rem;
     padding: 1rem;
     border-radius: 0.5rem;
     font-size: 1.2rem;
 }
-.book-btn { /*the book a call button */
+
+.book-btn {
+    /*the book a call button */
     border: solid 1px whitesmoke;
     border-radius: 0.5rem;
     padding: 1rem;
@@ -210,9 +223,103 @@ nav a.active { /* pseudo element to control when we cover over the navigation li
     font-size: 1.2rem;
 }
 
-.hero-caption{
+/*the freelance caption by the side of the hero img. */
+.hero-caption {
     position: absolute;
+    right: 4.5rem;
     bottom: 2rem;
+    font-size: 1.2rem;
+    text-align: right;
+    color: whitesmoke;
+}
+
+.Hero-schedule {
+    color: #d80c0f;
+}
+
+
+/* hero section is complete */
+
+/* media query introduction. 
+
+/*==================================================================*/
+
+@media (max-width: 768px) {
+    header {
+        background-color: #120202;
+        top: 0%;
+    }
+
+    .nav-link {
+        margin-bottom: 5rem;
+        left: 5%;
+    }
+
+    nav a {
+        font-size: 1rem;
+        margin-left: 1.3rem;
+    }
+
+    .logo {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-top: 3rem;
+    }
+
+    .hero-section {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10rem;
+        align-items: flex-start;
+    }
+
+    .hero-content {
+        max-width: 84%;
+        margin-bottom: 1rem;
+        padding-top: 1rem;
+    }
+
+    .hero img {
+        mask-image: linear-gradient(to bottom, transparent 0%, black 25%);
+        object-position: center;
+        height: auto;
+    }
+
+    .hero-content h1 {
+        font-size: 4.5rem;
+    }
+
+    .hero {
+        object-position: center;
+    }
+
+    .Hero-intro {
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+    }
+
+    .content-buttons {
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 3rem;
+    }
+
+    .work-btn,
+    .book-btn {
+        margin-left: 0%;
+        padding: 1rem 3.3rem;
+        font-size: 1.5rem;
+    }
+
+
+    .hero-caption {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        bottom: 3.5rem;
+        left: 1rem;
+    }
 }
 
 
@@ -229,9 +336,27 @@ nav a.active { /* pseudo element to control when we cover over the navigation li
 
 
 
+/*-------------------------------------------------------------
+.social-icons {
+    /* the hero section social media icons 
+    color: whitesmoke;
+    font-size: 3rem;
+    display: flex;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
 
+.social-icons a {
+    /* the social media icon
+    color: whitesmoke;
+    transition: 0.3s ease;
+}
 
-
+.social-icons a:hover {
+    /* hero section secial media icon pseudo styling 
+    transform: scale(1.2);
+    color: #F6F3E4;
+}
 
 
 
