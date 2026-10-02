@@ -38,7 +38,7 @@
                 <li><a href="#">HOME</a></li>
                 <li><a href="#">ABOUT</a></li>
                 <li><a href="#">PROJECTS</a></li>
-                <li><a href="#" S>DASHBOARD</a></li>
+                <li><a href="#">DASHBOARD</a></li>
                 <li><a href="#">BOOK A CALL</a></li>
                 <li class="contact-button">
                     <a href="#" class="btn">
@@ -91,11 +91,12 @@
                     work if
                     I tried my best with GOD.<br>
 
-                    I am inspired to create not just for money but to improve my skills and<br> build a portfolio for the
+                    I am inspired to create not just for money but to improve my skills and<br> build a portfolio for
+                    the
                     future.
                 </p>
                 <ul class="about-grid">
-                    <li><span class="grid-1">3+ </span>PROJECTS BEING BUILT</li>
+                    <li><span class="grid-1">3+ </span>PROJECTS <br>BEING BUILT</li>
                     <li><span class="grid-1">3+ </span>MONTHS OF EXPERIENCE</li>
                     <li><span class="grid-1">45% </span>AI-ASSISTED DEVELOPMENT</li>
                     <li>
@@ -107,9 +108,64 @@
             </div>
         </section>
         <hr>
+
+        <!--The projects section of the landing page-->
+        <section class="project-section">
+
+            <p class="project-intro">PROJECTS</p>
+            <div class="project-header">
+                <h2 class="recent-work">RECENT WORK</h2>
+                <a href="#" class="view-all">VIEW ALL PROJECTS <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="project-grid">
+                
+                <article class="project-card">
+                    <div class="project">
+                        <a href="#" class="project-img"><img src="../images/The-code-fisher.png"
+                                alt="Vibe Coded Code Fisher landing page website"></a>
+                    </div>
+                    <div class="project-content">
+                        <h3>Vibe Coded Code Fisher</h3>
+                        <p>Responsive Landing Page
+                            built <br>with HTML, CSS, JS & AI
+                        </p>
+                        <a href="#" class="view-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project">
+                        <a href="#" class="project-img"><img src="../images/Animated-code-fisher.png"
+                                alt="Image of AI Animated Code Fisher App"></a>
+                    </div>
+                    <div class="project-content">
+                        <h3>AI Animated Code Fisher</h3>
+                        <p> First App Idea. A social media app
+                            built <br>with Claude AI for programmers <br>
+                        </p>
+                        <a href="#" class="view-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project">
+                        <a href="#" class="project-img"><img src="../images/Tamar-oil.png"
+                                alt="Tamar Oil landing page website"></a>
+                    </div>
+                    <div class="project-content">
+                        <h3>Tamar Oil</h3>
+                        <p>My most recent website for a Palm Oil<br>business Landing Page built AI
+                        </p>
+                        <a href="#" class="view-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <hr>
     </section>
 
-<!--Javascript code in charge of making the header hide on scroll-->
+    <!--Javascript code in charge of making the header hide on scroll-->
     <script>
         let lastScrollY = window.scrollY;
         const header = document.querySelector("header");
@@ -126,12 +182,6 @@
             lastScrollY = currentScrollY;
         });
     </script>
-</body>
-
-</html>
-</section>
-
-
 </body>
 
 </html>
