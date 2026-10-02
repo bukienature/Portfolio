@@ -408,18 +408,22 @@ hr {
     display: block;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
-    border: 2px solid #12100f;
+    border: 1px solid #97828267;
+    border-bottom: none;
     position: relative;
 }
 
 .project-content {
     display: flex;
     flex-direction: column;
-    background-color: #12100f;
+    background-color: #000000;
     padding: 1rem;
     font-size: 1.5rem;
+    font-family: "Playwrite BE WAL Guides", cursive;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
+    border: 1px solid #97828267;
+    border-top: none;
     padding-bottom: 1.5rem;
 }
 
