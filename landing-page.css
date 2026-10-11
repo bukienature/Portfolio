@@ -8,6 +8,7 @@
     border: none;
     outline: none;
     font-family: "inter", sans-serif;
+    list-style: none;
 }
 
 html {
@@ -39,14 +40,14 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 1rem 9%;
+    padding: 1rem 2.9%;
     background-color: transparent;
     z-index: 100;
 }
 
 header.hide-header {
     transform: translateY(-100%);
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
 }
 
 .logo {
@@ -270,7 +271,7 @@ hr {
 
 /* hero section is complete */
 
-/*===========================================================*/
+/*=============================ABOUT-ME==============================*/
 /* SECTION 2 BEGINNING: About Section Of My Landing Page */
 /*===========================================================*/
 .about-section {
@@ -357,7 +358,7 @@ hr {
 
 /* about section is complete */
 
-/*===========================================================*/
+/*=============================PROJECTS==============================*/
 /* SECTION 3: The Project Section Of My Landing Page */
 /*===========================================================*/
 .project-section {
@@ -419,7 +420,6 @@ hr {
     background-color: #000000;
     padding: 1rem;
     font-size: 1.5rem;
-    font-family: "Playwrite BE WAL Guides", cursive;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
     border: 1px solid #97828267;
@@ -430,12 +430,192 @@ hr {
 .project-content h3 {
     font-size: 2rem;
     line-height: 2;
+    font-family: "Playwrite CA Guides", cursive;
+    display: block;
+    white-space: nowrap;
+}
+
+.project-content p {
+    font-family: "Caveat", cursive;
+    font-size: 1.8rem;
 }
 
 .view-arrow {
     font-size: 2rem;
     color: whitesmoke;
     margin-left: auto;
+}
+
+/* project section is complete */
+
+/*==============================DASHBOARD=============================*/
+/* SECTION 4: The Dashboard Section Of My Landing Page */
+/*===========================================================*/
+.Dashboard {
+    padding: 2rem 2%;
+    background: linear-gradient(to right, #0b0101 75%, #520e0e 100%);
+}
+
+.dash-intro {
+    color: #bd1316;
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.dashboard-content {
+    line-height: 1.5;
+}
+
+.dashboard-content h2 {
+    font-size: 3.5rem;
+}
+
+.skills {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.skill-list {
+    display: flex;
+    flex-direction: column;
+    width: 35rem;
+    border-right: 1px solid #97828267;
+}
+
+.skill-list li {
+    display: flex;
+    align-items: center;
+    line-height: 2.35;
+}
+
+.SN {
+    width: 17rem;
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+
+.skill-bar {
+    display: block;
+    width: 12rem;
+    height: 0.4rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0.5px 2px #97828267;
+    transition: all 0.2s ease;
+    background: #97828267;
+    margin-left: 1rem;
+}
+
+.skill-bar:hover {
+    box-shadow: 0 7px 5px #9782827d, 0 5px 5px #9782827d;
+}
+
+.skill-bar span {
+    height: 100%;
+    background: #b61e1e;
+    display: block;
+    animation: fillBar 2s ease-in-out forwards;
+}
+
+@keyframes fillBar {
+    from {
+        width: 0;
+    }
+}
+
+.skill-list li {
+    list-style: none;
+    display: flex;
+}
+
+.html-level {
+    width: 75%;
+}
+
+.css-level {
+    width: 56%;
+}
+
+.javascript-level {
+    width: 30%;
+}
+
+.python-level {
+    width: 38%;
+}
+
+.prompt-level {
+    width: 75%;
+}
+
+/*----------TOOLS----------*/
+
+.tools {
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    margin-left: 1.5rem;
+    border-right: 1px solid #97828267;
+}
+
+.tools img {
+    width: 3rem;
+    border-radius: 1rem;
+    margin: 0.5rem;
+    margin-left: .5rem;
+}
+
+.tools li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.TN {
+    font-size: 1.5rem;
+}
+
+/*--------------WORKFLOW--------------*/
+
+.workflow {
+    margin-left: 3rem;
+}
+
+.work-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.sign {
+    font-size: 2.8rem;
+    border: 3px solid rgba(245, 245, 245, 0.423);
+    border-radius: 50%;
+    padding: 2rem;
+    margin-bottom: 3rem;
+}
+
+.arrow {
+    font-size: 2rem;
+    transform: translateY(-2.5rem);
+}
+
+.work p {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.eng {
+    display: none;
+}
+
+.work span {
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
 
@@ -445,7 +625,7 @@ hr {
 ----------- Tablet Media Query ------------*/
 @media (min-width: 710px) and (max-width: 1055px) {
     header {
-        padding: 1rem 5%;
+        padding: 1rem 3.9%;
     }
 
     .hero-section {
@@ -552,7 +732,7 @@ hr {
     }
 
     .about-grid li {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 
     .about-grid {
@@ -566,7 +746,7 @@ hr {
     }
 
 
-/*-----------Project section style for tablet--------------------*/
+    /*-----------Project section style for tablet--------------------*/
 
     .project-intro {
         font-size: 1.1rem;
@@ -588,8 +768,118 @@ hr {
         font-size: 1.5rem;
     }
 
+    .project-content p {
+        font-size: 1.45rem;
+        display: block;
+        white-space: nowrap;
+    }
+
     .view-arrow {
         font-size: 1.5rem;
+    }
+
+    /*--------------The DASHBOARD SECTION---------------*/
+
+    .dash-intro {
+        color: #bd1316;
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .dashboard-content {
+        line-height: 1.2;
+    }
+
+    .dashboard-content h2 {
+        font-size: 3rem;
+    }
+
+    /*-------SKILLS-------*/
+    .skills {
+        margin-top: 1.5rem;
+        gap: 1rem;
+    }
+
+    .skill-list {
+        width: 30rem;
+    }
+
+    .skill-list li {
+        display: flex;
+        align-items: center;
+        line-height: 2.3;
+    }
+
+    .SN {
+        width: 8rem;
+        font-size: 1.3rem;
+    }
+
+    .skill-bar {
+        width: 8rem;
+        height: 0.25rem;
+        margin-left: .8rem;
+    }
+
+    /*----------TOOLS----------*/
+
+    .tools {
+        width: 20rem;
+        margin-left: 0;
+    }
+
+    .tools img {
+        width: 2rem;
+        border-radius: 1rem;
+    }
+
+    .tools li {
+        display: flex;
+        align-items: center;
+        gap: 0.2rem;
+    }
+
+    .TN {
+        font-size: 1rem;
+    }
+
+    /*------Workflow------*/
+
+    .workflow {
+        margin-left: 2rem;
+    }
+
+    .work-container {
+        gap: 1rem;
+        padding: 1rem 0;
+    }
+
+    .sign {
+        font-size: 2rem;
+        padding: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .arrow {
+        font-size: 1.5rem;
+        transform: translateY(-2.5rem);
+    }
+
+    .work p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .engineering {
+        display: none;
+    }
+
+    .eng {
+        display: inline;
+    }
+
+    .work span {
+        font-size: 1rem;
     }
 
 }
@@ -770,6 +1060,8 @@ hr {
     /*-------------The about section on mobile devices-----------------*/
     .about-section {
         padding: 2.5rem 5%;
+        padding-bottom: 0;
+        padding-top: 3rem;
     }
 
     .about-image {
@@ -817,7 +1109,9 @@ hr {
     /*-----------Project section style for mobile--------------------*/
     .project-section {
         padding: 2.5% 5%;
+        background: linear-gradient(to right, #0b0101 85%, #520e0e 100%);
     }
+
     .project-intro {
         font-size: 1.1rem;
         margin-bottom: 0.5rem;
@@ -849,6 +1143,117 @@ hr {
     .view-arrow {
         font-size: 1.5rem;
     }
+
+    /*--------------The DASHBOARD SECTION---------------*/
+    
+    .Dashboard {
+        padding: 2.5% 5%;
+    }
+
+    .dash-intro {
+        font-size: 1.2rem;
+        margin-bottom: 0.7rem;
+    }
+
+    .dashboard-content {
+        line-height: 1.2;
+    }
+
+    .dashboard-content h2 {
+        font-size: 3rem;
+    }
+
+    /*-------SKILLS-------*/
+
+    .skills {
+        flex-direction: column;
+    }
+
+    .skill-list {
+        width: 100%;
+        border: none;
+        padding: 0;
+        padding-bottom: 1.5rem;
+        border-bottom:1px solid rgb(85, 82, 82);
+    }
+
+    .skill-list li {
+        display: flex;
+        align-items: center;
+        line-height: 2;
+    }
+
+    .SN {
+        width: 15rem;
+        font-size: 1.5rem;
+        margin-right: 1rem;
+    }
+
+    .skill-bar {
+        width: 15rem;
+        height: 0.5rem;
+        margin-left: 0rem;
+        margin-bottom: 0.5rem;
+    }
+
+    /*----------TOOLS----------*/
+
+    .tools {
+        width: 100%;
+        border: 0;
+        padding: 1rem 0;
+        margin: 0;
+        border-bottom: 1px solid rgb(85, 82, 82);
+    }
+
+    .tools img {
+        width: 4rem;
+        border-radius: 2rem;
+    }
+
+    .tools li {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .TN {
+        font-size: 1.2rem;
+    }
+
+    /*------Workflow------*/
+
+    .workflow {
+        margin-left: 0;
+    }
+
+    .work-container {
+        gap: .8rem;
+        padding: 1rem 0;
+    }
+
+    .sign {
+        font-size: 1.5rem;
+        padding: 1rem;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    .arrow {
+        font-size: 1.2rem;
+        transform: translateY(-2.5rem);
+    }
+
+    .work p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .work span {
+        font-size: 1rem;
+    }
+
+
 }
 
 
