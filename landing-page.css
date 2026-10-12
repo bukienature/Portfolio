@@ -436,8 +436,8 @@ hr {
 }
 
 .project-content p {
-    font-family: "Caveat", cursive;
-    font-size: 1.8rem;
+    font-family: cursive;
+    font-size: 1.5rem;
 }
 
 .view-arrow {
@@ -616,6 +616,60 @@ hr {
 .work span {
     font-size: 1.5rem;
     font-weight: 700;
+}
+
+/*-----------End of the Dashboard section------------*/
+
+
+/*====================Book A Call=========================*/
+/*SECTION 5: THE BOOKING SECTION OF MY LANDING PAGE*/
+/*========================================================*/
+
+.book-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 2.5% 2%;
+    background: linear-gradient(to top left, #0b0101 80%, #520e0e 80%);
+}
+
+.book {
+    min-width: 45rem;
+    margin: 1rem;
+}
+
+.book h2 {
+    font-size: 3.3rem;
+    margin: 1.5rem 0;
+}
+
+.book p {
+    font-size: 2rem;
+    line-height: 1.4;
+}
+
+.booking-btn {
+    margin: 4rem 0;
+    background-color: #e42625;
+    padding: 1.8rem;
+    width: 23rem;
+    text-align: center;
+    border-radius: 1rem;
+    border: none;
+    font-size: 2.7rem;
+}
+
+.calendar {
+    width: 100%;
+    max-width: 70rem;
+}
+
+.calendar iframe {
+    filter: invert(90%) hue-rotate(180deg) brightness(95%) contrast(90%);
+    border-radius: 1rem;
+    margin-right: 7rem;
+    width: 100%;
+    height: 30rem;
+    display: block;
 }
 
 
@@ -882,6 +936,35 @@ hr {
         font-size: 1rem;
     }
 
+
+    /*--------------Book tablet section---------------*/
+
+    .book {
+        min-width: 30rem;
+    }
+
+    .book h2 {
+        font-size: 3rem;
+        margin: 1.5rem 0;
+    }
+
+    .book p {
+        font-size: 1.4rem;
+        line-height: 1.2;
+    }
+
+    .booking-btn {
+        padding: 1.5rem;
+        width: 17rem;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .calendar iframe {
+        height: 25rem;
+    }
+
+
 }
 
 /*========================The Mobile Media Query================================*/
@@ -1145,7 +1228,7 @@ hr {
     }
 
     /*--------------The DASHBOARD SECTION---------------*/
-    
+
     .Dashboard {
         padding: 2.5% 5%;
     }
@@ -1174,7 +1257,7 @@ hr {
         border: none;
         padding: 0;
         padding-bottom: 1.5rem;
-        border-bottom:1px solid rgb(85, 82, 82);
+        border-bottom: 1px solid rgb(85, 82, 82);
     }
 
     .skill-list li {
@@ -1251,6 +1334,36 @@ hr {
 
     .work span {
         font-size: 1rem;
+    }
+
+    /*--------------Book tablet section---------------*/
+
+    .book-section {
+        flex-direction: column;
+    }
+    .book {
+        min-width: 30rem;
+    }
+
+    .book h2 {
+        font-size: 2rem;
+        margin: 1.5rem 0;
+    }
+
+    .book p {
+        font-size: 1.2rem;
+        line-height: 1.2;
+    }
+
+    .booking-btn {
+        padding: 1rem;
+        width: 12rem;
+        font-size: 2.5rem;
+        margin: 1.5rem 0;
+    }
+
+    .calendar iframe {
+        height: 22rem;
     }
 
 
