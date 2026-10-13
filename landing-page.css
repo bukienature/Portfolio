@@ -437,6 +437,7 @@ hr {
 
 .project-content p {
     font-family: cursive;
+    font-weight: 600;
     font-size: 1.5rem;
 }
 
@@ -671,6 +672,82 @@ hr {
     height: 30rem;
     display: block;
 }
+
+
+/*====================CONTACT=========================*/
+/*SECTION 6: THE CONTACT SECTION OF MY LANDING PAGE*/
+/*========================================================*/
+.info-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 2.5%;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    background-color: #0b0101;
+}
+
+.info-section h2 {
+    font-size: 3rem;
+    color: #b61e1e;
+    margin-bottom: 2rem;
+}
+
+.info {
+    width: 25%;
+}
+
+.info-section h3 {
+    padding-top: 0.7rem;
+    margin-bottom: 1.6rem;
+}
+
+.available {
+    margin-top: 3rem;
+}
+
+.quick {
+    line-height: 2;
+    border-right: 1px solid #97828267;
+    width: 20%;
+    padding-left: 2rem;
+}
+
+.contact {
+    width: 25%;
+    line-height: 2;
+    padding-left: 1rem;
+}
+
+.connect {
+    margin-top: 2rem;
+}
+.connect p {
+    color:#5a5959;
+}
+
+.socials {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2.5rem;
+    gap: 2rem;
+}
+
+.socials li {
+    font-size: 2.7rem;
+    border: 2px solid #5a5959;
+    border-radius: 50%;
+    padding: 1rem 1.2rem;
+    text-align: center;
+}
+
+/*==========footer===========*/
+.footer p {
+    text-align: center;
+    font-size: 1.5rem;
+    color:#9782827d;
+    padding: 1.5rem;
+}
+
 
 
 
@@ -964,6 +1041,52 @@ hr {
         height: 25rem;
     }
 
+/*============================INFORMATION============================*/
+
+    .info-section {
+        font-size: 1.2rem;
+        line-height: 1.2;
+        overflow:hidden;
+    }
+
+    .info-section h2 {
+        font-size: 2.7rem;
+        color: #b61e1e;
+        margin-bottom: 2rem;
+    }
+
+    .info {
+        width: 25%;
+    }
+
+    .available {
+        margin-top: 3rem;
+    }
+
+    .quick {
+        line-height: 2;
+        border-right: 1px solid #97828267;
+        width: 17%;
+        padding-left: 2rem;
+    }
+
+    .q-link {
+        font-size: 1.2rem;
+    }
+
+    .contact {
+        width: 25%;
+        line-height: 2;
+        padding-left: 1rem;
+    }
+
+    .socials {
+        gap: 1rem;
+    }
+
+    .socials li {
+        font-size: 1.5rem;
+    }
 
 }
 
@@ -1341,6 +1464,7 @@ hr {
     .book-section {
         flex-direction: column;
     }
+
     .book {
         min-width: 30rem;
     }
@@ -1366,36 +1490,60 @@ hr {
         height: 22rem;
     }
 
+    /*============================INFORMATION============================*/
 
-}
+    .info-section {
+        font-size: 1.5rem;
+        line-height: 1.2;
+        flex-direction: row;
+        gap: 3rem;
+        flex-wrap: wrap;
+    }
+
+    .info-section h2 {
+        font-size: 2.7rem;
+        color: #b61e1e;
+        margin-bottom: 2rem;
+    }
+
+    .info {
+        flex:0 0 100%;
+    }
+
+    .available {
+        margin-top: 3rem;
+    }
+
+    .quick {
+        line-height: 2;
+        border-right: 1px solid #97828267;
+        width: 35%;
+        padding-left: 0;
+    }
+
+    .q-link {
+        font-size: 1.5rem;
+    }
+
+    .contact {
+        width: 50%;
+        line-height: 2;
+        padding-left: 0;
+        padding-right: 1rem;
+    }
+
+    .connect {
+        flex: 0 0 100%;
+    }
+
+    .socials {
+        gap: 1rem;
+        width: 50%;
+    }
+
+    .socials li {
+        font-size: 1.5rem;
+    }
 
 
-
-
-
-
-
-
-
-
-/*-------------------------------------------------------------
-.social-icons {
-    the hero section social media icons 
-    color: whitesmoke;
-    font-size: 3rem;
-    display: flex;
-    gap: 1.5rem;
-    margin: 2rem 0;
-}
-
-.social-icons a {
-    the social media icon
-    color: whitesmoke;
-    transition: 0.3s ease;
-}
-
-.social-icons a:hover {
-    hero section secial media icon pseudo styling 
-    transform: scale(1.2);
-    color: #F6F3E4;
 }
